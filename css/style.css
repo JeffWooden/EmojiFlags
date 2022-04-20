@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #181818;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.button {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: block;
+    color: white;
+}
+
+.button svg {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.link-anchor svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+
+/* EDITOR */
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+
+/*      PRESETS */
+
+.presets {
+    padding: 0.7rem;
+    background-color: #222;
+    border-radius: 0.35rem;
+}
+
+.preset-box {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#preset-selection {
+    background: #191919;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+#preset-selection:hover {
+    cursor: pointer;
+}
+
+
+/*      FLAG CONTROLS */
+
+.flag-canvas {
+    aspect-ratio: 5/3;
+    height: 30vh;
+    display: flex;
+}
+
+.part {
+    flex: 1;
+    height: 100%;
+    width: unset;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.primary-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+
+.direction {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(16*1rem);
+}
+
+
+/*      OUTPUT */
+
+#output {
+    padding: 0.5rem;
+    background-color: #222;
+    border-radius: 0.4rem;
+    border: 1px solid #626262;
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.preview-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/*      NOTIFICATIONS */
+
+.notifications {
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span {
+    transform: translateY(1rem);
+    opacity: 1;
+    transition: .2s ease-in;
+}
+
+span.animate {
+    transform: translateY(0);
+    opacity: 0;
+}
+
+
+/* REPONSIVE LAYOUT */
+
+@media only screen and (min-width: 900px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        flex: 1;
+        display: flex;
+    }
+    .editor {
+        flex: 1;
+        flex-wrap: wrap;
+    }
+    .preview {
+        flex: 1;
+    }
+}

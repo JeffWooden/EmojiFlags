@@ -1,44 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmojiFlags</title>
+    <title>EmojiFlags - Editor</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
-        <div class="presentation">
-            <h1>EmojiFlags</h1>
-            <p>Generate emoji's flag with your ideas!</p>
-            <ul class="links">
-                <li class="link-item">
-                    <a href="https://github.com/JeffWooden" class="link-anchor">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799c0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426c0 0-1.811.199-4.551 2.08c-.575-.16-1.548-.238-2.519-.238c-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002l1.732-.002c1.506 0 7.467-.115 7.467-7.301c0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115c0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531c.735.676 1.045 1.49 1.045 2.369c0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799c0 .994.582 1.801 1.3 1.801c.719 0 1.301-.807 1.301-1.801c0-.992-.582-1.799-1.301-1.799z"/></svg>
-                    </a>
-                </li>
-                <li class="link-item">
-                    <a href="https://twitter.com/JeffWooden_" class="link-anchor">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M17.316 6.246c.008.162.011.326.011.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-.625-5.787-1.697a7.577 7.577 0 0 0 5.588-1.562a3.779 3.779 0 0 1-3.526-2.621a3.858 3.858 0 0 0 1.705-.065a3.779 3.779 0 0 1-3.028-3.703v-.047a3.766 3.766 0 0 0 1.71.473a3.775 3.775 0 0 1-1.168-5.041a10.716 10.716 0 0 0 7.781 3.945a3.813 3.813 0 0 1-.097-.861a3.773 3.773 0 0 1 3.774-3.773a3.77 3.77 0 0 1 2.756 1.191a7.602 7.602 0 0 0 2.397-.916a3.789 3.789 0 0 1-1.66 2.088a7.55 7.55 0 0 0 2.168-.594a7.623 7.623 0 0 1-1.884 1.953z"/></svg>
-                    </a>
-                </li>
-                <li class="link-item">
-                    <a href="https://www.youtube.com/channel/UCYdKxaycl0OsnMryFl2-HMA" class="link-anchor">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10 2.3C.172 2.3 0 3.174 0 10s.172 7.7 10 7.7s10-.874 10-7.7s-.172-7.7-10-7.7zm3.205 8.034l-4.49 2.096c-.393.182-.715-.022-.715-.456V8.026c0-.433.322-.638.715-.456l4.49 2.096c.393.184.393.484 0 .668z"/></svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <h1>EmojiFlags</h1>
+        <p>Get random emoji gradients from your favorite flags!</p>
+        <ul class="links">
+            <li class="link-item">
+                <a href="https://github.com/JeffWooden" class="link-anchor">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799c0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426c0 0-1.811.199-4.551 2.08c-.575-.16-1.548-.238-2.519-.238c-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002l1.732-.002c1.506 0 7.467-.115 7.467-7.301c0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115c0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531c.735.676 1.045 1.49 1.045 2.369c0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799c0 .994.582 1.801 1.3 1.801c.719 0 1.301-.807 1.301-1.801c0-.992-.582-1.799-1.301-1.799z"/></svg>
+                </a>
+            </li>
+            <li class="link-item">
+                <a href="https://twitter.com/JeffWooden_" class="link-anchor">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M17.316 6.246c.008.162.011.326.011.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-.625-5.787-1.697a7.577 7.577 0 0 0 5.588-1.562a3.779 3.779 0 0 1-3.526-2.621a3.858 3.858 0 0 0 1.705-.065a3.779 3.779 0 0 1-3.028-3.703v-.047a3.766 3.766 0 0 0 1.71.473a3.775 3.775 0 0 1-1.168-5.041a10.716 10.716 0 0 0 7.781 3.945a3.813 3.813 0 0 1-.097-.861a3.773 3.773 0 0 1 3.774-3.773a3.77 3.77 0 0 1 2.756 1.191a7.602 7.602 0 0 0 2.397-.916a3.789 3.789 0 0 1-1.66 2.088a7.55 7.55 0 0 0 2.168-.594a7.623 7.623 0 0 1-1.884 1.953z"/></svg>
+                </a>
+            </li>
+            <li class="link-item">
+                <a href="https://www.youtube.com/channel/UCYdKxaycl0OsnMryFl2-HMA" class="link-anchor">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10 2.3C.172 2.3 0 3.174 0 10s.172 7.7 10 7.7s10-.874 10-7.7s-.172-7.7-10-7.7zm3.205 8.034l-4.49 2.096c-.393.182-.715-.022-.715-.456V8.026c0-.433.322-.638.715-.456l4.49 2.096c.393.184.393.484 0 .668z"/></svg>
+                </a>
+            </li>
+        </ul>
     </header>
-    <div class="launch-menu">
-        <h2>Where do you want to start?</h2>
-        <select name="preset" id="preset-selector">
-            <option value="default">Default</option>
-        </select>
-        <p>or</p>
-        <a href="#" class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1 1 13 0a6.5 6.5 0 0 1-13 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm.75 4.75a.75.75 0 0 0-1.5 0v2.5h-2.5a.75.75 0 0 0 0 1.5h2.5v2.5a.75.75 0 0 0 1.5 0v-2.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-2.5z"/></svg>
-        </a>
+    <div class="container">
+        <div class="editor">
+            <div class="presets">
+                <p>Use a preset</p>
+                <div class="preset-box">
+                    <select id="preset-selection"></select>
+                    <a href="#" class="button" id="preset-enter"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M7.47 10.78a.75.75 0 0 0 1.06 0l3.75-3.75a.75.75 0 0 0-1.06-1.06L8.75 8.44V1.75a.75.75 0 0 0-1.5 0v6.69L4.78 5.97a.75.75 0 0 0-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5z"/></svg></a>
+                </div>
+            </div>
+            <div class="flag">
+                <div class="primary-buttons">
+                    <div class="direction">
+                        <a href="#" class="button" id="columns"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.75 0A1.75 1.75 0 0 0 1 1.75v12.5c0 .966.784 1.75 1.75 1.75h2.5A1.75 1.75 0 0 0 7 14.25V1.75A1.75 1.75 0 0 0 5.25 0h-2.5zM2.5 1.75a.25.25 0 0 1 .25-.25h2.5a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-2.5a.25.25 0 0 1-.25-.25V1.75zM10.75 0A1.75 1.75 0 0 0 9 1.75v12.5c0 .966.784 1.75 1.75 1.75h2.5A1.75 1.75 0 0 0 15 14.25V1.75A1.75 1.75 0 0 0 13.25 0h-2.5zm-.25 1.75a.25.25 0 0 1 .25-.25h2.5a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-2.5a.25.25 0 0 1-.25-.25V1.75z"/></svg></a>
+                        <a href="#" class="button" id="rows"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M16 2.75A1.75 1.75 0 0 0 14.25 1H1.75A1.75 1.75 0 0 0 0 2.75v2.5A1.75 1.75 0 0 0 1.75 7h12.5A1.75 1.75 0 0 0 16 5.25v-2.5zm-1.75-.25a.25.25 0 0 1 .25.25v2.5a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25v-2.5a.25.25 0 0 1 .25-.25h12.5zM16 10.75A1.75 1.75 0 0 0 14.25 9H1.75A1.75 1.75 0 0 0 0 10.75v2.5A1.75 1.75 0 0 0 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-2.5zm-1.75-.25a.25.25 0 0 1 .25.25v2.5a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25v-2.5a.25.25 0 0 1 .25-.25h12.5z"/></svg></a>
+                    </div>
+                    <a href="#" class="button" id="reset"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" fill="currentColor" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"></path></svg></a>
+                </div>
+                <div class="row">
+                    <div class="flag-canvas vertical">
+                    </div>
+                    <div class="flag-object">
+                        <a href="#" class="button" id="plus"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M12 8v4m0 0v4m0-4h4m-4 0H8"/><circle cx="12" cy="12" r="10"/></g></svg></a>
+                        <a href="#" class="button" id="minus"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M16 12H8"/><circle cx="12" cy="12" r="10"/></g></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="colors">
+                <a href="#" class="button color" data-color="#fbf7f4" id="white"></a>
+                <a href="#" class="button color" data-color="#fdafc4" id="pink"></a>
+                <a href="#" class="button color" data-color="#fe1e25" id="red"></a>
+                <a href="#" class="button color" data-color="#fe941d" id="orange"></a>
+                <a href="#" class="button color" data-color="#ffff00" id="yellow"></a>
+                <a href="#" class="button color" data-color="#06bd02" id="green"></a>
+                <a href="#" class="button color" data-color="#75d6eb" id="aqua"></a>
+                <a href="#" class="button color" data-color="#011a98" id="blue"></a>
+                <a href="#" class="button color" data-color="#760188" id="purple"></a>
+                <a href="#" class="button color" data-color="#603814" id="brown"></a>
+                <a href="#" class="button color" data-color="#a3a3a3" id="light-gray"></a>
+                <a href="#" class="button color" data-color="#2d2d2d" id="gray"></a>
+                <a href="#" class="button color" data-color="#000000" id="black"></a>
+            </div>
+            <div class="buttons">
+                <a href="#" class="button" id="preview"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M1.679 7.932c.412-.621 1.242-1.75 2.366-2.717C5.175 4.242 6.527 3.5 8 3.5c1.473 0 2.824.742 3.955 1.715c1.124.967 1.954 2.096 2.366 2.717a.119.119 0 0 1 0 .136c-.412.621-1.242 1.75-2.366 2.717C10.825 11.758 9.473 12.5 8 12.5c-1.473 0-2.824-.742-3.955-1.715C2.92 9.818 2.09 8.69 1.679 8.068a.119.119 0 0 1 0-.136zM8 2c-1.981 0-3.67.992-4.933 2.078C1.797 5.169.88 6.423.43 7.1a1.619 1.619 0 0 0 0 1.798c.45.678 1.367 1.932 2.637 3.024C4.329 13.008 6.019 14 8 14c1.981 0 3.67-.992 4.933-2.078c1.27-1.091 2.187-2.345 2.637-3.023a1.619 1.619 0 0 0 0-1.798c-.45-.678-1.367-1.932-2.637-3.023C11.671 2.992 9.981 2 8 2zm0 8a2 2 0 1 0 0-4a2 2 0 0 0 0 4z"/></svg></a>
+            </div>
+        </div>
+        <div class="preview">
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem;">
+                <div class="preview-box">
+                    <p><code id="output">👉😎👉 EmojiFlags</code></p>
+                    <div class="more">
+                        <a href="#" class="button" id="copy"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M5.75 1a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-3a.75.75 0 0 0-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 0 0-.752-1.298A1.75 1.75 0 0 0 2 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 13.25v-9.5a1.75 1.75 0 0 0-.874-1.515a.75.75 0 1 0-.752 1.298a.25.25 0 0 1 .126.217v9.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-9.5a.25.25 0 0 1 .126-.217z"/></svg></a>
+                    </div>
+                </div>
+                <div class="notifications">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/editor.js "></script>
 </body>
+
 </html>
