@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     break;
                 case "picker":
-                case "save":
                 case "preview":
                 case "share":
                 case "copy":
