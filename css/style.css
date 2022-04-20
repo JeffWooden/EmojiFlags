@@ -104,6 +104,10 @@ header {
     display: flex;
 }
 
+.flag-canvas.vertical {
+    flex-direction: column;
+}
+
 .part {
     flex: 1;
     height: 100%;
