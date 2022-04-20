@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Loading + creating buttons' events
     Array.from(document.querySelectorAll('.button')).forEach(button => {
-        if(button.classList.includes("color")){
+        if(button.classList.contains("color")){
             button.style["backgroundColor"] = button.getAttribute("data-color");
             button.addEventListener('click', e => {
                 e.preventDefault();
