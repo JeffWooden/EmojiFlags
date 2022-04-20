@@ -98,6 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     break;
                 case "picker":
                 case "preview":
+                    document.querySelector("#output").value = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g,"_")])).join("")
+                    break;
                 case "share":
                 case "copy":
                     break;
