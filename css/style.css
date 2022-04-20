@@ -98,6 +98,7 @@ header {
 .part {
     flex: 1;
     height: 100%;
+    width: unset;
 }
 
 .row {
