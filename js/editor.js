@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             switch(button.getAttribute("id")){
                 case "columns":
-                    document.querySelector(".flag-canvas").classList.add("vertical")
+                    document.querySelector(".flag-canvas").classList.add("vertical");
                     break;
                 case "rows":
-                    document.querySelector(".flag-canvas").classList.remove("vertical")
+                    document.querySelector(".flag-canvas").classList.remove("vertical");
                     break;
                 case "reset":
                     Array.from(document.querySelectorAll(".part")).forEach(e => e.remove())
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     break;
                 case "picker":
                 case "preview":
-                    document.querySelector("#output").value = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g,"_")])).join(document.querySelector(".flag-canvas").classList.contains("vertical") ? '\n' : '')
+                    document.querySelector("#output").value = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g,"_")])).join(document.querySelector(".flag-canvas").classList.contains("vertical") ? '' : '\n')
                     break;
                 case "share":
                 case "copy":
