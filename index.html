@@ -60,9 +60,12 @@
             Array.from(document.querySelectorAll(".button")).forEach(button => {
                 button.addEventListener('click', e => {
                     e.preventDefault();
-                    switch(e.target.getAttribute("id")){
+                    switch(button.getAttribute("id")){
                         case "enter":
+                            location.href = location.href.match(/(^[^#]*)/)[0].replace('index.html', 'editor.html') + '#' + select.value;
+                            break;
                         case "blank":
+                            location.href.match(/(^[^#]*)/)[0].replace('index.html', 'editor.html')
                             break;
                     }
                 })
