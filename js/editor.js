@@ -12,28 +12,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     // Loading + creating buttons' events
     Array.from(document.querySelectorAll('.button')).forEach(button => {
-        if(button.classList.contains("part")){
-            button.addEventListener('click', e => {
-                e.preventDefault();
+        button.addEventListener('click', e => {
+            e.preventDefault();
+            if(button.classList.contains("part")){
                 parts = Array.from(document.querySelectorAll(".flag-canvas > .part")).forEach(part => {
                     part.classList.remove("active")
                 })
                 button.classList.add("active")
-            })
-        }
+            }
 
-        switch(button.getAttribute("id")){
-            case "columns":
-            case "rows":
-            case "reset":
-            case "plus":
-            case "minus":
-            case "picker":
-            case "save":
-            case "preview":
-            case "share":
-            case "copy":
-                break;
-        }
+            switch(button.getAttribute("id")){
+                case "columns":
+                case "rows":
+                case "reset":
+                case "plus":
+                case "minus":
+                case "picker":
+                case "save":
+                case "preview":
+                case "share":
+                case "copy":
+                    break;
+            }
+        })
     })
 })
