@@ -1,13 +1,17 @@
+var colors;
+
 document.addEventListener("DOMContentLoaded", () => {
+    colors = Array.from(document.querySelectorAll(".button.color")).forEach(button => {
+        button.style["backgroundColor"] = button.getAttribute("data-color");
+        button.addEventListener('click', e => {
+            e.preventDefault();
+            changeColor(button.getAttribute("data-color"));
+        }).map(button => {
+            return {color: button.getAttribute("data-color"), button: button}
+        })
+    })
     // Loading + creating buttons' events
     Array.from(document.querySelectorAll('.button')).forEach(button => {
-        if(button.classList.contains("color")){
-            button.style["backgroundColor"] = button.getAttribute("data-color");
-            button.addEventListener('click', e => {
-                e.preventDefault();
-                changeColor(button.getAttribute("data-color"));
-            })
-        }
         if(button.classList.contains("part")){
             button.addEventListener('click', e => {
                 e.preventDefault();
