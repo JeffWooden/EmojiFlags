@@ -14,7 +14,7 @@ var presets = {
     demisexual: ['black','white','purple','light-gray'],
     demigirl: ['gray','light-gray','pink','white','pink','light-gray','gray'],
     demiboy: ['gray','light-gray','light-blue','white','light-blue','light-gray','gray'],
-    transgender: ['blue','pink','white','pink','blue'],
+    transgender: ['light-blue','pink','white','pink','light-blue'],
     greygender: ['light-gray','blue','gray'],
     neutrois: ['white','green','black'],
     nonbinary: ['yellow','white','purple','black'],
