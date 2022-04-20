@@ -122,6 +122,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     break;
                 case "copy":
                     navigator.clipboard.writeText(document.querySelector("#output").innerHTML)
+                    if (document.querySelector(".notifications span") != null) break;
+                    el = document.createElement("span")
+                    el.innerHTML = "Copied!"
+                    setTimeout(() => {
+                        el.classList.add("animate")
+                        setTimeout(() => {
+                            el.remove()
+                        }, 210)
+                    }, 10);
+                    document.querySelector(".notifications").appendChild(el);
                     break;
             }
         })
