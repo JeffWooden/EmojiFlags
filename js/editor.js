@@ -1,6 +1,15 @@
 var colors;
 var parts;
 
+select = document.querySelector("#preset-selection")
+Object.entries(presets).forEach((preset,i) => {
+    el = document.createElement('option')
+    if(i==0) el.setAttribute("selected", "true")
+    el.value = preset[0]
+    el.innerHTML = `${preset[0]}'s flag`
+    select.append(el)
+})
+
 function updateParts(){
     parts = Array.from(document.querySelectorAll(".flag-canvas > .part"));
     return;
@@ -73,6 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
             updateParts();
 
             switch(button.getAttribute("id")){
+                case "preset-enter":
+                    try {
+                        Array.from(document.querySelectorAll(".part")).forEach(e => e.remove())
+                        presets[select.value].forEach(flagColor => { createPart(flagColor) })
+                    } catch {
+                        alert("Unknown preset")
+                    }
+                    break;
                 case "columns":
                     document.querySelector(".flag-canvas").classList.add("vertical");
                     break;
