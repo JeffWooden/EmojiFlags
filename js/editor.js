@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.querySelector("#output").innerHTML = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g, "_")])).join('')
                     break;
                 case "copy":
+                    navigator.clipboard.writeText(document.querySelector("#output").innerHTML)
                     break;
             }
         })
