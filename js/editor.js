@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 changeColor(button.getAttribute("data-color"));
             })
         }
+        if(button.classList.contains("part")){
+            button.addEventListener('click', e => {
+                e.preventDefault();
+                parts = Array.from(document.querySelectorAll(".flag-canvas > .part")).forEach(part => {
+                    part.classList.remove("active")
+                })
+                button.classList.add("active")
+            })
+        }
 
         switch(button.getAttribute("id")){
             case "columns":
