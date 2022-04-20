@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "preview":
                     document.querySelector("#output").value = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g,"_")])).join(document.querySelector(".flag-canvas").classList.contains("vertical") ? '' : '\n')
                     break;
-                case "share":
                 case "copy":
                     break;
             }
