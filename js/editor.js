@@ -66,6 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     updateParts();
                     break;
                 case "minus":
+                    if(parts.length == 1) break;
+                    element = document.querySelector(".part.active")
+                    try {
+                        element.previousElementSibling.click()
+                    } catch(err) {
+                        element.nextElementSibling.click()
+                    } finally {
+                        element.remove();
+                        updateParts();
+                    }
+                    break;
                 case "picker":
                 case "save":
                 case "preview":
