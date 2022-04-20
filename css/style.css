@@ -142,6 +142,13 @@ header {
     gap: 1rem;
 }
 
+.preview-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 
 /* REPONSIVE LAYOUT */
 
