@@ -141,3 +141,25 @@ header {
     align-items: center;
     gap: 1rem;
 }
+
+
+/* REPONSIVE LAYOUT */
+
+@media only screen and (min-width: 900px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        flex: 1;
+        display: flex;
+    }
+    .editor {
+        flex: 1;
+        flex-wrap: wrap;
+    }
+    .preview {
+        flex: 1;
+    }
+}
