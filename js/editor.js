@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "plus":
                     createPart();
                     updateParts();
+                    break;
                 case "minus":
                 case "picker":
                 case "save":
