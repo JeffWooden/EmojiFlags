@@ -104,6 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "columns":
                 case "rows":
                 case "reset":
+                    Array.from(document.querySelectorAll(".part")).forEach(e => e.remove())
+                    presets.rainbow.forEach(flagColor => createPart(flagColor))
+                    updateParts();
+                    break;
                 case "plus":
                     createPart();
                     updateParts();
