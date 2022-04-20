@@ -55,6 +55,19 @@
             el.innerHTML = `${preset[0]}'s flag`
             select.append(el)
         })
+
+        document.addEventListener("DOMContentLoaded", () => {
+            Array.from(document.querySelectorAll(".button")).forEach(button => {
+                button.addEventListener('click', e => {
+                    e.preventDefault();
+                    switch(e.target.getAttribute("id")){
+                        case "enter":
+                        case "blank":
+                            break;
+                    }
+                })
+            })
+        })
     </script>
 </body>
 </html>
