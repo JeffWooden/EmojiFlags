@@ -9,7 +9,7 @@ function updateParts(){
 document.addEventListener("DOMContentLoaded", () => {
     // Colors' buttons
     colors = Array.from(document.querySelectorAll(".button.color")).map(button => {
-        return {color: button.getAttribute("data-color"), button: button}
+        return {color: [button.getAttribute("id"),button.getAttribute("data-color")], button: button}
     });
     colors.forEach(item => {
         button = item.button;
@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 parts.forEach(part => {
                     part.classList.remove("active")
                 })
-                button.classList.add("active")
+                colors.forEach(item => {item.button.classList.remove("active")})
+                try{colors.filter(item => item.color[0] == button.getAttribute("data-color"))[0].button.classList.add("active")}catch(err){return console.error(`Can't find the color "${button.getAttribute("data-color")}"`)} finally { button.classList.add("active") }
             }
 
             switch(button.getAttribute("id")){
