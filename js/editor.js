@@ -2,20 +2,20 @@ var colors;
 var parts;
 
 select = document.querySelector("#preset-selection")
-Object.entries(presets).forEach((preset,i) => {
+Object.entries(presets).forEach((preset, i) => {
     el = document.createElement('option')
-    if(i==0) el.setAttribute("selected", "true")
+    if (i == 0) el.setAttribute("selected", "true")
     el.value = preset[0]
     el.innerHTML = `${preset[0]}'s flag`
     select.append(el)
 })
 
-function updateParts(){
+function updateParts() {
     parts = Array.from(document.querySelectorAll(".flag-canvas > .part"));
     return;
 }
 
-function createPart(color='white'){
+function createPart(color = 'white') {
     element = document.createElement("a")
     element.setAttribute("href", "#")
     element.classList.add("button", "part", "active")
@@ -24,11 +24,11 @@ function createPart(color='white'){
         parts.forEach(part => {
             part.classList.remove("active")
         });
-        colors.forEach(item => {item.button.classList.remove("active")})
-        try{colors.filter(item => item.color[0] == e.target.getAttribute("data-color"))[0].button.classList.add("active")}catch(err){return console.error(`Can't find the color "${e.target.getAttribute("data-color")}"`)} finally { e.target.classList.add("active") }
+        colors.forEach(item => { item.button.classList.remove("active") })
+        try { colors.filter(item => item.color[0] == e.target.getAttribute("data-color"))[0].button.classList.add("active") } catch (err) { return console.error(`Can't find the color "${e.target.getAttribute("data-color")}"`) } finally { e.target.classList.add("active") }
     });
     currentPart = document.querySelector(".part.active")
-    if(currentPart == null) {
+    if (currentPart == null) {
         document.querySelector(".flag-canvas").appendChild(element)
     } else {
         currentPart.classList.remove("active")
@@ -49,7 +49,7 @@ function changeColor(colorName) {
 document.addEventListener("DOMContentLoaded", () => {
     // Colors' buttons
     colors = Array.from(document.querySelectorAll(".button.color")).map(button => {
-        return {color: [button.getAttribute("id"),button.getAttribute("data-color")], button: button}
+        return { color: [button.getAttribute("id"), button.getAttribute("data-color")], button: button }
     });
     colors.forEach(item => {
         button = item.button;
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loading flag
     try {
         preset = /#(\w*)$/.exec(document.URL)[1]
-        if(preset == "") throw null;
+        if (preset == "") throw null;
         presets[preset].forEach(flagColor => {
             createPart(flagColor)
         })
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             updateParts();
 
-            switch(button.getAttribute("id")){
+            switch (button.getAttribute("id")) {
                 case "preset-enter":
                     try {
                         Array.from(document.querySelectorAll(".part")).forEach(e => e.remove())
@@ -106,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     updateParts();
                     break;
                 case "minus":
-                    if(parts.length == 1) break;
+                    if (parts.length == 1) break;
                     element = document.querySelector(".part.active")
                     try {
                         element.previousElementSibling.click()
-                    } catch(err) {
+                    } catch (err) {
                         element.nextElementSibling.click()
                     } finally {
                         element.remove();
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     break;
                 case "preview":
-                    document.querySelector("#output").value = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g,"_")])).join('')
+                    document.querySelector("#output").value = parts.map(part => choice(emojis[part.getAttribute("data-color").replace(/\-/g, "_")])).join('')
                     break;
                 case "copy":
                     break;
