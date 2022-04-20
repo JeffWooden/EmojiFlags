@@ -6,7 +6,7 @@ function updateParts(){
     return;
 }
 
-function createPart(){
+function createPart(color='white'){
     element = document.createElement("a")
     element.setAttribute("href", "#")
     element.classList.add("button", "part", "active")
@@ -25,7 +25,7 @@ function createPart(){
         currentPart.classList.remove("active")
         currentPart.parentElement.insertBefore(element, currentPart.nextSibling)
     }
-    changeColor('white')
+    changeColor(color)
 }
 
 function changeColor(colorName) {
