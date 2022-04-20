@@ -6,6 +6,15 @@ function updateParts(){
     return;
 }
 
+function changeColor(colorName) {
+    colors.forEach(item => item.button.classList.remove("active"))
+    color = colors.filter(item => item.color[0] == colorName)[0]
+    color.button.classList.add("active")
+    part = document.querySelector(".part.active")
+    part.style["background-color"] = color.color[1];
+    part.setAttribute("data-color", colorName)
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // Colors' buttons
     colors = Array.from(document.querySelectorAll(".button.color")).map(button => {
@@ -16,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.style["backgroundColor"] = button.getAttribute("data-color");
         button.addEventListener('click', e => {
             e.preventDefault();
-            changeColor(button.getAttribute("data-color"));
+            changeColor(e.target.getAttribute("id"));
         })
     });
 
