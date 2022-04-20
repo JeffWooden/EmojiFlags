@@ -1,4 +1,10 @@
 var colors;
+var parts;
+
+function updateParts(){
+    parts = Array.from(document.querySelectorAll(".flag-canvas > .part"));
+    return;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // Colors' buttons
@@ -19,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener('click', e => {
             e.preventDefault();
             if(button.classList.contains("part")){
-                parts = Array.from(document.querySelectorAll(".flag-canvas > .part")).forEach(part => {
+                parts.forEach(part => {
                     part.classList.remove("active")
                 })
                 button.classList.add("active")
