@@ -8,5 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 changeColor(button.getAttribute("data-color"));
             })
         }
+
+        switch(button.getAttribute("id")){
+            case "columns":
+            case "rows":
+            case "reset":
+            case "plus":
+            case "minus":
+            case "picker":
+            case "save":
+            case "preview":
+            case "share":
+            case "copy":
+                break;
+        }
     })
 })
