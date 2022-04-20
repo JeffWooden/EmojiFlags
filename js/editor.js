@@ -79,6 +79,21 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
+    // Loading flag
+    try {
+        preset = /#(\w*)$/.exec(document.URL)[1]
+        if(preset == "") throw null;
+        presets[preset].forEach(flagColor => {
+            createPart(flagColor)
+        })
+    } catch {
+        presets.rainbow.forEach(flagColor => {
+            createPart(flagColor)
+        })
+    } finally {
+        updateParts();
+    }
+
     // Loading + creating buttons' events
     Array.from(document.querySelectorAll('.button')).forEach(button => {
         button.addEventListener('click', e => {
