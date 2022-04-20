@@ -16,7 +16,7 @@ function createPart(){
             part.classList.remove("active")
         });
         colors.forEach(item => {item.button.classList.remove("active")})
-        try{colors.filter(item => item.color[0] == element.getAttribute("data-color"))[0].button.classList.add("active")}catch(err){return console.error(`Can't find the color "${element.getAttribute("data-color")}"`)} finally { element.classList.add("active") }
+        try{colors.filter(item => item.color[0] == e.target.getAttribute("data-color"))[0].button.classList.add("active")}catch(err){return console.error(`Can't find the color "${e.target.getAttribute("data-color")}"`)} finally { e.target.classList.add("active") }
     });
     currentPart = document.querySelector(".part.active")
     if(currentPart == null) {
