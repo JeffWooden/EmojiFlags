@@ -6,6 +6,28 @@ function updateParts(){
     return;
 }
 
+function createPart(){
+    element = document.createElement("a")
+    element.setAttribute("href", "#")
+    element.classList.add("button", "part", "active")
+    element.addEventListener('click', e => {
+        e.preventDefault();
+        parts.forEach(part => {
+            part.classList.remove("active")
+        });
+        colors.forEach(item => {item.button.classList.remove("active")})
+        try{colors.filter(item => item.color[0] == element.getAttribute("data-color"))[0].button.classList.add("active")}catch(err){return console.error(`Can't find the color "${element.getAttribute("data-color")}"`)} finally { element.classList.add("active") }
+    });
+    currentPart = document.querySelector(".part.active")
+    if(currentPart == null) {
+        document.querySelector(".flag-canvas").appendChild(element)
+    } else {
+        currentPart.classList.remove("active")
+        currentPart.parentElement.insertBefore(element, currentPart.nextSibling)
+    }
+    changeColor('white')
+}
+
 function changeColor(colorName) {
     colors.forEach(item => item.button.classList.remove("active"))
     color = colors.filter(item => item.color[0] == colorName)[0]
@@ -33,19 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
     Array.from(document.querySelectorAll('.button')).forEach(button => {
         button.addEventListener('click', e => {
             e.preventDefault();
-            if(button.classList.contains("part")){
-                parts.forEach(part => {
-                    part.classList.remove("active")
-                })
-                colors.forEach(item => {item.button.classList.remove("active")})
-                try{colors.filter(item => item.color[0] == button.getAttribute("data-color"))[0].button.classList.add("active")}catch(err){return console.error(`Can't find the color "${button.getAttribute("data-color")}"`)} finally { button.classList.add("active") }
-            }
+            updateParts();
 
             switch(button.getAttribute("id")){
                 case "columns":
                 case "rows":
                 case "reset":
                 case "plus":
+                    createPart();
+                    updateParts();
                 case "minus":
                 case "picker":
                 case "save":
