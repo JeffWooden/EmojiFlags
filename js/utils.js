@@ -26,3 +26,7 @@ var presets = {
     platromantic: ['orange','gray','light-gray','black'],
     demiromantic: ['black','white','green','light-gray']
 }
+
+function choice(arr){
+    return arr[Math.floor(Math.random()*arr.length)]
+}
