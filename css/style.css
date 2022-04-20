@@ -47,6 +47,9 @@ header {
     color: white;
 }
 
+
+/* EDITOR */
+
 .editor {
     display: flex;
     flex-direction: column;
@@ -54,6 +57,9 @@ header {
     align-items: center;
     padding: 2rem;
 }
+
+
+/*      PRESETS */
 
 .presets {
     padding: 0.7rem;
@@ -78,6 +84,9 @@ header {
 #preset-selection:hover {
     cursor: pointer;
 }
+
+
+/*      FLAG CONTROLS */
 
 .flag-canvas {
     aspect-ratio: 5/3;
