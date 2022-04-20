@@ -1,15 +1,19 @@
 var colors;
 
 document.addEventListener("DOMContentLoaded", () => {
-    colors = Array.from(document.querySelectorAll(".button.color")).forEach(button => {
+    // Colors' buttons
+    colors = Array.from(document.querySelectorAll(".button.color")).map(button => {
+        return {color: button.getAttribute("data-color"), button: button}
+    });
+    colors.forEach(item => {
+        button = item.button;
         button.style["backgroundColor"] = button.getAttribute("data-color");
         button.addEventListener('click', e => {
             e.preventDefault();
             changeColor(button.getAttribute("data-color"));
-        }).map(button => {
-            return {color: button.getAttribute("data-color"), button: button}
         })
-    })
+    });
+
     // Loading + creating buttons' events
     Array.from(document.querySelectorAll('.button')).forEach(button => {
         button.addEventListener('click', e => {
