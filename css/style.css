@@ -78,3 +78,20 @@ header {
 #preset-selection:hover {
     cursor: pointer;
 }
+
+.flag-canvas {
+    aspect-ratio: 5/3;
+    height: 30vh;
+    display: flex;
+}
+
+.part {
+    flex: 1;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
